@@ -11,7 +11,11 @@
       <li><a href="index.php?id=CSS">CSS</a></li>
       <li><a href="index.php?id=JavaScript">JavaScript</a></li>
     </ol>
-    <h2>WEB</h2>
+    <h2>
+        <?php
+        echo $_GET['id'];
+        ?>
+    </h2>
     <p>
       The World Wide Web (abbreviated WWW or the Web) is an information space
       where documents and other web resources are identified by Uniform Resource
