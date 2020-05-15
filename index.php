@@ -51,6 +51,10 @@ function print_list(){
     
     <?php if(isset($_GET['id'])){?>
       <a href="./modify.php?id=<?=$_GET['id'] ?>">Modify</a>
+      <form action="./delete_process.php" method="post">
+        <input type="hidden" name="id" value="<?=$_GET['id']?>">
+        <input type="submit" value="Delete">
+      </form>
     <?php } ?>
     <h2>
         <?php
