@@ -7,10 +7,20 @@
   <body>
     <h1><a href="index.php">WEB</a></h1>
     <ol>
-      <li><a href="./index.php?id=HTML">HTML</a></li>
-      <li><a href="./index.php?id=CSS">CSS</a></li>
-      <li><a href="./index.php?id=JavaScript">JavaScript</a></li>
-      <li><a href="./index.php?id=PHP">PHP</a></li>
+    <?php
+      $list = scandir('./data');
+      $i = 0;
+      while ($i < count($list)) {
+        if ($list[$i] != ".") {
+          if ($list[$i] != "..") {
+            if ($list[$i] != "WEB") {
+              echo '<li><a href="./index.php?id='.$list[$i].'">'.$list[$i].'</a></li>';
+            }
+          }
+        }
+        $i += 1;
+      }
+    ?>
     </ol>
     <h2>
         <?php
