@@ -9,7 +9,8 @@ function print_title(){
 
 function print_description(){
   if(isset($_GET['id'])){
-    echo htmlspecialchars(file_get_contents("./data/".$_GET['id']));
+    $basename = basename($_GET['id']);
+    echo htmlspecialchars(file_get_contents("./data/".$basename));
   } else{
     echo file_get_contents("./data/WEB");
   }
