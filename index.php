@@ -48,6 +48,10 @@ function print_list(){
     ?>
     </ol>
     <a href="./create.php">Create</a>
+    
+    <?php if(isset($_GET['id'])){?>
+      <a href="./modify.php?id=<?=$_GET['id'] ?>">Modify</a>
+    <?php } ?>
     <h2>
         <?php
         print_title();
