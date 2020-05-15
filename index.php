@@ -47,6 +47,7 @@ function print_list(){
     print_list();
     ?>
     </ol>
+    <a href="./create.php">Create</a>
     <h2>
         <?php
         print_title();
