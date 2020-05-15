@@ -14,7 +14,7 @@
         if ($list[$i] != ".") {
           if ($list[$i] != "..") {
             if ($list[$i] != "WEB") {
-              echo '<li><a href="./index.php?id='.$list[$i].'">'.$list[$i].'</a></li>';
+              echo "<li><a href=\"./index.php?id=$list[$i]\">$list[$i]</a></li>";
             }
           }
         }
